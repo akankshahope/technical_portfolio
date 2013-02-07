@@ -1,0 +1,160 @@
+
+<html>
+ <head><title>{{title}}</title> 
+ </head>
+ 
+<body >
+
+<script language="JavaScript">
+function validate(e)
+{
+if(document.frm1.n1.value=="")
+{
+return(alert(" NAME MISSING!!"));
+}
+else if(document.frm1.e1.value=="")
+{
+alert("E-MAIL ID MISSING!!");
+return;
+}
+
+else if(document.frm1.dob1.value=="")
+{
+alert("DOB MISSING!!");
+return;
+}
+
+else if(document.frm1.num1.value=="")
+{
+alert("CONTACT MISSING!!");
+return;
+}
+else if(document.frm1.perc1.value=="")
+{
+alert("PERCENTAGE MISSING!!");
+return;
+}
+else if(document.frm1.a1.value=="")
+{
+alert("ADDRESS MISSING!!");
+return;
+}
+else if(document.frm1.project1.value=="")
+{
+alert("PROJECT DETAILS MISSING!!");
+return;
+}
+
+
+else{
+document.frm1.action="\Result";
+document.frm1.submit();
+}
+}
+</script>
+
+<center>
+<h1> <font color="darkred">OpenLabs</font></h1>
+<h3>Technical Portfolio </h3>
+
+<form name="frm1"  method="post" >
+<INPUT TYPE="HIDDEN" NAME="ACTION" VALUE="ORDER">
+<TABLE border="6" frame="hsides" rules="none" cellspacing="15"  style="border-color:rgb(0,0,150)">
+
+<TR>
+
+<TD>NAME:</TD>
+<TD><INPUT TYPE="TEXT" NAME="n1"></TD>
+</TR>
+
+<TR>
+<TD>Email Id:</TD>
+<TD><INPUT TYPE="TEXT" NAME="e1"></TD>
+</TR>
+
+
+
+<TR>
+<TD>DOB:(ddmmyy)</TD>
+<TD><INPUT TYPE="number" NAME="dob1"></TD>
+</TR>
+
+
+<TR>
+<td>Maritial Status:</TD>
+<TD><select name="ms1">
+  <option>unmarried</option>
+  <option>married</option>
+  </select></TD>
+</TR>
+
+<TR>
+<td>Gender:</TD>
+<TD><select name="gender1">
+  <option>MALE</option>
+  <option>FEMALE</option>
+  </select></TD>
+</TR>
+
+<TR>
+<TD>Address:</TD>
+<TD><INPUT TYPE="TEXT" NAME="a1"></TD>
+</TR>
+
+<TR>
+<TD>Contact No:</TD>
+<TD><INPUT TYPE="NUMBER" NAME="num1"></TD>
+</TR>
+
+<TR>
+<TD>Experience:</TD>
+<TD><select name="exp1">
+ <option>fresher</option>
+ <option>1-3</option>
+ <option>3-5</option>
+ <option>>5</option>
+</select></td>
+</TR>
+
+<tr>
+<td>Project Details:</td>
+<td><textarea name="project1" rows="4" cols="40"></textarea></td>
+</tr>
+
+
+<TR>
+<td>Current Degree:</TD>
+<TD><select name="quali1">
+  <option>10</option>
+  <option>12</option>
+  <option>GRADUATE</option>
+  <option>POST GRADUATE</option>
+</select></TD>
+</TR>
+
+<tr>
+<TD>Percentage:</TD>
+<TD><INPUT TYPE="Number" NAME="perc1"></TD>
+</TR>
+
+<tr>
+<td>Key Skills:</TD>
+<TD><select name="ks1">
+  <option>c</option>
+  <option>JAVA</option>
+  <option>PYTHON</option>
+  <option>.NET</option>
+  <option>DBMS</option>
+</select></TD>
+</TR>
+
+<br><br>
+</TABLE>
+
+<br>
+<input value="submit" type="submit" onClick="validate()"> <input type=reset value="RESET">
+ 
+</form>
+</center>
+</body>
+</html>
